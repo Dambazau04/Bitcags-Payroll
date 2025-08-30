@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beginner’s Guide to HTML, CSS & JavaScript</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      background: #f8fafd;
+      color: #222;
+    }
+    header.cover {
+      background: linear-gradient(135deg, #007bff, #00c853);
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    header.cover h1 {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+    header.cover h2 {
+      font-weight: 400;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #007bff;
+      margin-top: 50px;
+    }
+    h3 {
+      color: #00c853;
+    }
+    code, pre {
+      background: #f4f4f4;
+      padding: 10px 14px;
+      border-radius: 6px;
+      display: block;
+      margin: 12px 0;
+      overflow-x: auto;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
+      padding: 10px;
+      background: #f1f1f1;
+      color: #444;
+    }
+    .print-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 26px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .print-btn:hover {
+      background: #0056b3;
+    }
+
+    /* Page Number Styling */
+    @media print {
+      body {
+        background: white;
+      }
+      .print-btn {
+        display: none;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      @page {
+        margin: 20mm;
+      }
+      @page :left {
+        @bottom-left {
+          content: counter(page);
+        }
+      }
+      @page :right {
+        @bottom-right {
+          content: counter(page);
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Page -->
+  <header class="cover">
+    <h1>Beginner’s Guide to HTML, CSS & JavaScript</h1>
+    <h2>Step-by-Step eBook for Beginners</h2>
+    <p>Developed by Abdurrahman CodeVerge Technology</p>
+  </header>
+
+  <!-- Print Button -->
+  <button class="print-btn" onclick="window.print()">📄 Print / Save as PDF</button>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- CHAPTER 1 -->
+    <h2>Chapter 1 – Introduction to Web Development</h2>
+    <p>
+      Web development is the process of building websites and applications that run in a browser.  
+      It has two sides: <b>Front-End (what users see)</b> and <b>Back-End (server-side logic)</b>.  
+      This book focuses on the <b>Front-End basics: HTML, CSS, and JavaScript</b>.
+    </p>
+    <p><b>Why Learn Web Development?</b></p>
+    <ul>
+      <li>It’s one of the most in-demand tech skills.</li>
+      <li>You can build your own websites and apps.</li>
+      <li>Freelancing and job opportunities worldwide.</li>
+      <li>It’s creative and fun!</li>
+    </ul>
+    <p><b>Tools You Need:</b></p>
+    <ol>
+      <li>A modern browser (Chrome, Firefox, or Edge).</li>
+      <li>A code editor (Visual Studio Code recommended).</li>
+      <li>Basic typing and logical thinking skills.</li>
+    </ol>
+    <p>
+      In this journey, we’ll start with <b>HTML</b> for structure, then <b>CSS</b> for design, and finally <b>JavaScript</b> for interactivity.
+    </p>
+
+    <!-- CHAPTER 2 -->
+    <h2>Chapter 2 – Getting Started with HTML</h2>
+    <p>
+      HTML (HyperText Markup Language) is the skeleton of a web page.  
+      Every web page you see online is built on HTML. Tags like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;img&gt;</code> define content.
+    </p>
+    <p><b>Basic HTML Structure:</b></p>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    <p>
+      The <b>&lt;!DOCTYPE html&gt;</b> tells the browser this is an HTML5 document.  
+      The <b>&lt;head&gt;</b> contains metadata like title and links.  
+      The <b>&lt;body&gt;</b> contains the visible page content.
+    </p>
+
+    <!-- CHAPTER 3 -->
+    <h2>Chapter 3 – Semantic HTML</h2>
+    <p>
+      Semantic tags describe the meaning of content. Instead of using only <code>&lt;div&gt;</code>,  
+      we use meaningful tags like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>.
+    </p>
+    <pre>
+&lt;header&gt;
+  &lt;h1&gt;My Blog&lt;/h1&gt;
+&lt;/header&gt;
+&lt;article&gt;
+  &lt;h2&gt;Post Title&lt;/h2&gt;
+  &lt;p&gt;Post content goes here...&lt;/p&gt;
+&lt;/article&gt;
+&lt;footer&gt;
+  &lt;p&gt;Copyright 2025&lt;/p&gt;
+&lt;/footer&gt;
+    </pre>
+
+    <!-- CHAPTER 4 -->
+    <h2>Chapter 4 – Introduction to CSS</h2>
+    <p>
+      CSS (Cascading Style Sheets) makes websites beautiful.  
+      You can change colors, fonts, layouts, and animations.
+    </p>
+    <p><b>Example CSS:</b></p>
+    <pre>
+h1 {
+  color: blue;
+  text-align: center;
+}
+p {
+  font-size: 18px;
+  color: gray;
+}
+    </pre>
+    <p><b>Ways to Add CSS:</b></p>
+    <ol>
+      <li><b>Inline:</b> Inside HTML tags using <code>style=""</code>.</li>
+      <li><b>Internal:</b> Inside <code>&lt;style&gt;</code> in the <code>&lt;head&gt;</code>.</li>
+      <li><b>External:</b> A separate <code>style.css</code> file linked in HTML.</li>
+    </ol>
+
+    <!-- CHAPTER 5 -->
+    <h2>Chapter 5 – CSS Layout with Flexbox</h2>
+    <p>
+      Flexbox is a CSS layout model that makes arranging items simple.  
+      Example:
+    </p>
+    <pre>
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+    </pre>
+    <p>
+      With flexbox you can easily build navigation bars, responsive grids, and align content vertically.
+    </p>
+
+    <!-- CHAPTER 6 -->
+    <h2>Chapter 6 – Introduction to JavaScript</h2>
+    <p>
+      JavaScript is a programming language that adds interactivity.  
+      Example:
+    </p>
+    <pre>
+&lt;button onclick="showMessage()"&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+  function showMessage() {
+    alert("Hello! Welcome to JavaScript.");
+  }
+&lt;/script&gt;
+    </pre>
+    <p>
+      When the button is clicked, the function runs and shows an alert.
+    </p>
+
+    <!-- CHAPTER 7 -->
+    <h2>Chapter 7 – JavaScript Basics</h2>
+    <p><b>Variables:</b></p>
+    <pre>
+let name = "Ali";
+const pi = 3.14;
+var age = 20;
+    </pre>
+    <p><b>Data Types:</b> String, Number, Boolean, Object, Array</p>
+    <p><b>Conditions:</b></p>
+    <pre>
+if (age &gt;= 18) {
+  console.log("You are an adult");
+} else {
+  console.log("You are a minor");
+}
+    </pre>
+    <p><b>Loops:</b></p>
+    <pre>
+for (let i = 1; i &lt;= 5; i++) {
+  console.log("Number " + i);
+}
+    </pre>
+
+    <!-- CHAPTER 8 -->
+    <h2>Chapter 8 – Mini Projects</h2>
+    <h3>1. Calculator</h3>
+    <pre>
+function add(a, b) {
+  return a + b;
+}
+console.log(add(2, 3)); // 5
+    </pre>
+
+    <h3>2. Digital Clock</h3>
+    <pre>
+setInterval(() =&gt; {
+  let time = new Date().toLocaleTimeString();
+  console.log(time);
+}, 1000);
+    </pre>
+
+    <h3>3. Form Validation</h3>
+    <pre>
+if(document.getElementById("name").value === "") {
+  alert("Name is required!");
+}
+    </pre>
+
+    <!-- CHAPTER 9 -->
+    <h2>Chapter 9 – Next Steps</h2>
+    <p>
+      Now that you’ve learned the basics of HTML, CSS, and JS:  
+    </p>
+    <ul>
+      <li>Practice daily by building small projects.</li>
+      <li>Learn responsive design and CSS Grid.</li>
+      <li>Move to advanced JavaScript (DOM, APIs, ES6+).</li>
+      <li>Explore frameworks (React, Vue, Angular).</li>
+      <li>Learn about back-end (Node.js, PHP, Python).</li>
+    </ul>
+
+    <p><b>Resources:</b></p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+      <li><a href="https://www.freecodecamp.org/">FreeCodeCamp</a></li>
+      <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+    </ul>
+
+    <footer>
+      Developed by Abdurrahman CodeVerge Technology
+    </footer>
+  </div>
+
+</body>
+</html>
